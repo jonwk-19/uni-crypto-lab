@@ -1,0 +1,36 @@
+:root {
+  --bg: #0f1216;
+  --card: #161b22;
+  --text: #e6edf3;
+  --muted: #9fb0c3;
+  --primary: #00e694; /* tu vibra X4A 😉 */
+  --border: #222a35;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0; font-family: system-ui, Segoe UI, Roboto, sans-serif;
+  background: var(--bg); color: var(--text);
+  display: grid; place-items: center; min-height: 100vh; padding: 24px;
+}
+.card {
+  width: min(880px, 100%); background: var(--card); border: 1px solid var(--border);
+  border-radius: 16px; padding: 20px; box-shadow: 0 8px 24px rgba(0,0,0,.35);
+}
+.row { display: grid; gap: 12px; }
+@media (min-width: 720px) { .row-2 { grid-template-columns: 1fr 1fr; } }
+label { color: var(--muted); font-size: 14px; }
+textarea, input[type="number"] {
+  width: 100%; padding: 12px; border-radius: 10px; border: 1px solid var(--border);
+  background: #0c1015; color: var(--text); resize: vertical; min-height: 120px;
+}
+.controls { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+button {
+  padding: 10px 14px; border-radius: 10px; border: 1px solid var(--border);
+  background: #0c1015; color: var(--text); cursor: pointer;
+}
+button.primary { border-color: var(--primary); outline: 1px solid var(--primary); }
+.toggle { display: inline-flex; align-items: center; gap: 6px; margin-right: 10px; }
+.key-box { width: 100px; min-height: auto; }
+.help { font-size: 12px; color: var(--muted); }
+h1 { margin: 0 0 12px; font-size: 20px; }

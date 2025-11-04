@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Criptografía Básica – Cifrado César</title>
+  <link rel="stylesheet" href="src/styles/styles.css" />
+</head>
+<body>
+  <div class="card">
+    <h1>Cifrado César (mod 26)</h1>
+    <p class="help">C = (P + K) mod 26 &nbsp; | &nbsp; P = (C − K) mod 26</p>
+
+    <div class="row row-2">
+      <div>
+        <label for="input">Mensaje</label>
+        <textarea id="input" placeholder="Escribe tu mensaje aquí..."></textarea>
+      </div>
+      <div>
+        <label for="output">Resultado</label>
+        <textarea id="output" placeholder="Aquí verás el resultado..." readonly></textarea>
+      </div>
+    </div>
+
+    <div class="row" style="margin-top:12px;">
+      <div class="controls">
+        <label>Clave K</label>
+        <input id="key" class="key-box" type="number" value="3" />
+        <label class="toggle">
+          <input id="only-letters" type="checkbox" checked />
+          Solo letras [A–Z]
+        </label>
+        <label class="toggle">
+          <input id="preserve-case" type="checkbox" checked />
+          Conservar mayúsc./minúsc.
+        </label>
+      </div>
+      <div class="controls">
+        <button id="btn-encrypt" class="primary">Cifrar</button>
+        <button id="btn-decrypt">Descifrar</button>
+        <button id="btn-swap">↔ Pasar resultado a entrada</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="src/ui/main.js"></script>
+</body>
+</html>
